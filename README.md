@@ -59,6 +59,8 @@
 داخل پوشه پروژه اجرا کنید:
 
 ```bash
+git clone https://github.com/Unknown-sir/VTP.git
+cd VTP
 sudo bash install.sh
 ```
 
