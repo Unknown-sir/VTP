@@ -1,3 +1,0 @@
-"""VTP Panel Edition."""
-
-__version__ = "4.2.0-vtp"
