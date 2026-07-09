@@ -1,0 +1,16 @@
+[Unit]
+Description=VortexL2 Tunnel Apply Service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+Environment=PYTHONPATH=/opt/vortexl2
+ExecStartPre=/sbin/modprobe l2tp_core
+ExecStartPre=/sbin/modprobe l2tp_netlink
+ExecStartPre=/sbin/modprobe l2tp_eth
+ExecStart=/usr/local/bin/vortexl2 apply
+
+[Install]
+WantedBy=multi-user.target
